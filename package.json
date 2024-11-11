@@ -4,15 +4,19 @@
   "devDependencies": {
     "esbuild": "^0.24.0",
     "esbuild-css-modules-plugin": "^3.1.2",
+    "esbuild-plugin-copy": "^2.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets --loader:.png=file  --loader:.jpg=file"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
-    "@hotwired/turbo-rails": "^8.0.12"
+    "@hotwired/turbo-rails": "^8.0.12",
+    "leaflet": "^1.9.4",
+    "react-datepicker": "^7.5.0",
+    "react-leaflet": "^4.2.1"
   }
 }
